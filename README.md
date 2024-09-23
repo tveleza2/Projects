@@ -1,8 +1,13 @@
 # My repository
+
+
+<p style="text-align: center;"> <img src="https://github.com/tveleza2.png" width="200" /> </p>
+
 ## About me
 As a Physics Engineer, I have applied my knowledge in physics and programming to contribute to environmental projects, especially in waste management. Our collaboration has enabled the development of innovative solutions that optimize data processing, a testament to my ability to work in a team and plan projects effectively.
 
 My academic background, combined with various additional courses, has equipped me with technical skills in Python and other software tools. I am motivated by problem-solving and have a passion for continuous learning, which drives me to always seek excellence in the projects I am involved in.
+
 ## Projects
 Repository to display different projects developed independently during my career.
 In this repository you can find:
