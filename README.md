@@ -5,3 +5,5 @@ In this repository you can find:
  - My first Angular hello world.
  - An optimizer for the proper sampling to solve the numerical Rayleigh-Sommerfeld, using the Riemmann Sumation Approach.
  - A project to generate a sample from a dataset using python. 
+
+Note: The Angular project is still under development
