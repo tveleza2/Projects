@@ -1,7 +1,8 @@
 # My repository
 
 
-<p style="text-align: center;"> <img src="https://github.com/tveleza2.png" width="200" /> </p>
+<img src="https://github.com/tveleza2.png" width="200" /> 
+
 
 ## About me
 As a Physics Engineer, I have applied my knowledge in physics and programming to contribute to environmental projects, especially in waste management. Our collaboration has enabled the development of innovative solutions that optimize data processing, a testament to my ability to work in a team and plan projects effectively.
