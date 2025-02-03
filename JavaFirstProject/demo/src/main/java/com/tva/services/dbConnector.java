@@ -14,4 +14,15 @@ public class dbConnector {
             return null;
         }
     }
+
+    public static void shutConnection(Connection con) {
+        if (con != null) {
+            try {
+                con.close();
+                System.out.println("Connection closed successfully");
+            } catch (SQLException e) {
+                System.out.println("Traceback closing the connection:" + e.getMessage());
+            }
+        }
+    }
 }
