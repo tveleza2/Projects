@@ -63,7 +63,8 @@ public class BookService {
             st.setInt(1, id);
             st.executeUpdate();
         } catch (Exception e) {
-            System.out.println(e);        }
+            System.out.println(e);        
+        }
     }
 
     public void lendBook(int book_id, String user){

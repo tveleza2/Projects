@@ -76,6 +76,10 @@ INSERT INTO genres(name) VALUES
 ('Drama'),
 ('Poetry');
 
+
+DELETE FROM books;
+ALTER TABLE books AUTO_INCREMENT = 1;
+
 INSERT INTO books (title, author_id, genre_id, lent) VALUES ('Cien años de soledad',(SELECT a.id from authors a WHERE a.name = "Gabriel Garcia Marquez"),(SELECT g.id from genres g WHERE g.name = "Fantasy"),FALSE);
 
 SELECT * FROM books;
@@ -96,3 +100,5 @@ SELECT concat(name, ' ' ,surename) AS Nombre, email AS Correo, isAdmin AS Admini
 INSERT INTO users (email, name, surename, birthdate, password, isAdmin) VALUES ("tvelezacosta5@gmail.com","Tomas","Velez",DATE("2002-02-25"),"abc123",TRUE);
 
 SELECT concat(name, ' ' ,surename) AS Nombre, email AS Correo, isAdmin AS Administrador FROM users WHERE id = 1;
+
+
