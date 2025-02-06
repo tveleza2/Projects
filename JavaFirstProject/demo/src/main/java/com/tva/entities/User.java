@@ -18,7 +18,6 @@ public class User {
         this.name = name;
         this.surename = surename;
         this.encodedPassword = this.encoder.encode(password);
-        this.encodedPassword = password;
         this.isAdmin = isAdmin;
         this.birthDate = birthDate;
     }

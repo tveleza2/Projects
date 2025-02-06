@@ -29,6 +29,9 @@ public class UserDAO extends DAO{
         List<User> users = new ArrayList<>();
         try {
             outputQuery(query, (Object[])null);
+            if (!resultSet.isBeforeFirst() ) {    
+                System.out.println("No data"); 
+            }
             while(resultSet.next()){
                 User newUser = new User(resultSet.getString("email"), resultSet.getString("name"), resultSet.getString("surename"), resultSet.getDate("birthdate"), resultSet.getString("password"),resultSet.getBoolean("isAdmin"));
                 users.add(newUser);
@@ -47,6 +50,9 @@ public class UserDAO extends DAO{
         List<User> users = new ArrayList<>();
         try {
             outputQuery(query, id);
+            if (!resultSet.isBeforeFirst() ) {    
+                System.out.println("No data"); 
+            }
             while(resultSet.next()){
                 User newUser = new User(resultSet.getString("email"), resultSet.getString("name"), resultSet.getString("surename"), resultSet.getDate("birthdate"), resultSet.getString("password"),resultSet.getBoolean("isAdmin"));
                 users.add(newUser);
@@ -65,6 +71,9 @@ public class UserDAO extends DAO{
         List<User> users = new ArrayList<>();
         try {
             outputQuery(query, email);
+            if (!resultSet.isBeforeFirst() ) {    
+                System.out.println("No data"); 
+            }
             while(resultSet.next()){
                 User newUser = new User(resultSet.getString("email"), resultSet.getString("name"), resultSet.getString("surename"), resultSet.getDate("birthdate"), resultSet.getString("password"),resultSet.getBoolean("isAdmin"));
                 users.add(newUser);
@@ -78,4 +87,23 @@ public class UserDAO extends DAO{
             System.out.println(e);}
     }
     
+    public void updateUser(String email,User newUser) {
+        String query = "UPDATE users SET email = ?, name = ?, surename = ?, birthdate = ?, password = ?, isAdmin = ? WHERE email = ?;";
+        try {
+            noOutputQuery(query, newUser.getEmail(),newUser.getName(),newUser.getSurename(),newUser.getBirthDay(),newUser.getEncodedPassword(),newUser.isAdmin(),newUser.getEmail());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deleteUser(String email) {
+        String query = "DELETE FROM users WHERE email = ?;";
+        try {
+            noOutputQuery(query, email);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+
 }
