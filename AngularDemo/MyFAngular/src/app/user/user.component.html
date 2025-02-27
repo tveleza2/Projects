@@ -1,9 +1,0 @@
-<section>
-    @if (isLoggedIn) {
-        <p>Bienvenido, {{username}}</p>
-        <img (click)="greet(username)" alt="photo" src="https://github.com/tveleza2.png"/>} 
-    @else {
-        <p>¡Inicia sesión!</p>
-        <button (click)="isLoggedIn = true">Log In</button>}
-    
-</section>
